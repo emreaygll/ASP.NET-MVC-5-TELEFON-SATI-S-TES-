@@ -1,0 +1,26 @@
+﻿@using proje.Entity
+@model IEnumerable<Urun>
+<div id="myCarousel" class="carousel slide homCar">
+    <div class="carousel-inner">
+
+        <div class="item active">
+            <img style="width:100%" src="~/Content/image/logo.png" alt="bootstrap ecommerce templates">
+            <div class="carousel-caption">
+                
+            </div>
+        </div>
+        @foreach (var item in Model)
+        {
+        <div class="item">
+            <a href="/Home/UrunDetay/@item.id"> <img style="width:100%" src="~/Content/image/@item.image" ></a>
+            <div class="carousel-caption">
+                
+             
+            </div>
+        </div>
+        }
+
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>

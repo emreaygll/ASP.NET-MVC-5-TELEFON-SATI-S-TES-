@@ -1,0 +1,65 @@
+﻿@using proje.Entity
+@model Urun
+
+<div class="row">
+    <div id="sidebar" class="span3">
+        <div class="well well-small">
+            <ul class="nav nav-list">
+                @Html.Action("_KategoriList", "Kategori")
+                <li style="border:0"> &nbsp;</li>
+            </ul>
+        </div>
+
+       
+        @Html.Action("_FeaturedUrunList", "Home")
+
+    </div>
+    <div class="span9">
+        <ul class="breadcrumb">
+            <li><a href="/Home/Index">Anasayfa</a> <span class="divider">/</span></li>
+            <li><a href="/Home/Urun">Ürünler</a> <span class="divider">/</span></li>
+            <li class="active">Ürün Detay</li>
+        </ul>
+        <div class="well well-small">
+            <div class="row-fluid">
+                <div class="span5">
+                    <div id="myCarousel" class="carousel slide cntr">
+                        
+                            <div class="item">
+                                <a href="#"> <img src="~/Content/image/@Model.image" alt="" style="width:100%"></a>
+                            </div>
+                           
+                       
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+                    </div>
+                </div>
+                <div class="span7">
+                    <h3>@Model.İsim</h3>
+                    <hr class="soft">
+
+                    <form class="form-horizontal qtyFrm">
+                        <div class="control-group">
+                            <label class="control-label"><span>@Model.Fiyat ₺</span></label>
+                           
+                        </div>
+
+                      
+                      
+                        <h4>Stok: @Model.Stok</h4>
+                        <p>
+                            @Model.Acıklama
+                        </p><p>
+                            <button type="submit" class="shopBtn"><span class=" icon-shopping-cart"></span> Satın Al</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <hr class="softn clr">
+
+
+           
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+﻿@model proje.Entity.Kategori
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kategori</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.İsim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.İsim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Acıklama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acıklama)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
